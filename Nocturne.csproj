@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F277D182-9534-4EDB-9B8D-2951A4ACCF58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nocturne</RootNamespace>
+    <AssemblyName>Nocturne</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>DesktopGL</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;LINUX</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;LINUX</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Camera.cs" />
+    <Compile Include="Debug\Debug.cs" />
+    <Compile Include="Debug\Insist.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="Entities\Component.cs" />
+    <Compile Include="Entities\Components\Graphics\AnimatedSpriteRenderer.cs" />
+    <Compile Include="Entities\Components\Logic\Tween.cs" />
+    <Compile Include="Graphics\ActionFrame.cs" />
+    <Compile Include="InternalUtils\ComponentList.cs" />
+    <Compile Include="Entities\Components\Graphics\SpriteRenderer.cs" />
+    <Compile Include="Entities\Components\Physics\Colliders\BoxCollider.cs" />
+    <Compile Include="Entities\Components\Physics\Colliders\CircleCollider.cs" />
+    <Compile Include="Entities\Components\Physics\Colliders\Collider.cs" />
+    <Compile Include="Entities\Components\Physics\Colliders\PolygonCollider.cs" />
+    <Compile Include="Entities\Components\Physics\Mover.cs" />
+    <Compile Include="Graphics\PrototypeSprite.cs" />
+    <Compile Include="InternalUtils\TagLists.cs" />
+    <Compile Include="Math\SubpixelFloat.cs" />
+    <Compile Include="Math\SubpixelVector2.cs" />
+    <Compile Include="Physics\ColliderTriggerHelper.cs" />
+    <Compile Include="Physics\CollisionResult.cs" />
+    <Compile Include="Entities\RenderableComponent.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="InternalUtils\EntityList.cs" />
+    <Compile Include="Entities\Transform.cs" />
+    <Compile Include="Graphics\CompositeSprite.cs" />
+    <Compile Include="Graphics\ISprite.cs" />
+    <Compile Include="Graphics\Subtexture.cs" />
+    <Compile Include="Graphics\SpriteAnimation.cs" />
+    <Compile Include="Graphics\Sprite.cs" />
+    <Compile Include="Graphics\SpriteFrame.cs" />
+    <Compile Include="Input\GamePadData.cs" />
+    <Compile Include="Input\Input.cs" />
+    <Compile Include="Input\TouchInput.cs" />
+    <Compile Include="Input\Virtual\VirtualAxis.cs" />
+    <Compile Include="Input\Virtual\VirtualButton.cs" />
+    <Compile Include="Input\Virtual\VirtualInput.cs" />
+    <Compile Include="Input\Virtual\VirtualIntegerAxis.cs" />
+    <Compile Include="Input\Virtual\VirtualJoystick.cs" />
+    <Compile Include="Math\Flags.cs" />
+    <Compile Include="Math\Mathf.cs" />
+    <Compile Include="Math\Matrix2D.cs" />
+    <Compile Include="Math\RectangleF.cs" />
+    <Compile Include="Physics\Collisions.cs" />
+    <Compile Include="Physics\Shapes\Box.cs" />
+    <Compile Include="Physics\Physics.cs" />
+    <Compile Include="Physics\Shapes\Polygon.cs" />
+    <Compile Include="Physics\Ray2D.cs" />
+    <Compile Include="Physics\RaycastHit.cs" />
+    <Compile Include="Physics\Shapes\Circle.cs" />
+    <Compile Include="Physics\Shapes\Shape.cs" />
+    <Compile Include="Physics\Shapes\ShapeCollisions\ShapeCollisionsBox.cs" />
+    <Compile Include="Physics\Shapes\ShapeCollisions\ShapeCollisionsCircle.cs" />
+    <Compile Include="Physics\Shapes\ShapeCollisions\ShapeCollisionsLine.cs" />
+    <Compile Include="Physics\Shapes\ShapeCollisions\ShapeCollisionsPoint.cs" />
+    <Compile Include="Physics\Shapes\ShapeCollisions\ShapeCollisionsPolygon.cs" />
+    <Compile Include="Physics\SpatialHash.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="Tiled\TiledTypes\ImageLayer.cs" />
+    <Compile Include="Tiled\TiledTypes\ObjectLayer.cs" />
+    <Compile Include="Tiled\MapData.cs" />
+    <Compile Include="Tiled\TiledCore\ITmxElement.cs" />
+    <Compile Include="Tiled\TiledCore\ITmxLayer.cs" />
+    <Compile Include="Tiled\TiledTypes\TileLayer.cs" />
+    <Compile Include="Tiled\TiledTypes\TileLayerTile.cs" />
+    <Compile Include="Tiled\TiledTypes\TileLayerTileset.cs" />
+    <Compile Include="Tiled\TiledTypes\Tileset.cs" />
+    <Compile Include="Tiled\TiledTypes\TilesetTile.cs" />
+    <Compile Include="Tiled\TiledCore\TmxBase64Data.cs" />
+    <Compile Include="Tiled\TiledCore\TmxDocument.cs" />
+    <Compile Include="Tiled\TiledCore\TmxList.cs" />
+    <Compile Include="Tiled\MapLoader.cs" />
+    <Compile Include="Util\BitTag.cs" />
+    <Compile Include="Util\Collections\Deque.cs" />
+    <Compile Include="Util\Collections\ListPool.cs" />
+    <Compile Include="Util\Collections\Pair.cs" />
+    <Compile Include="Util\Collections\Pool.cs" />
+    <Compile Include="Util\Commands.cs" />
+    <Compile Include="Util\Draw.cs" />
+    <Compile Include="Util\Ease.cs" />
+    <Compile Include="Util\Enums.cs" />
+    <Compile Include="Util\Extensions\ColorExt.cs" />
+    <Compile Include="Util\Extensions\IEnumerableExt.cs" />
+    <Compile Include="Util\Extensions\RectangleExt.cs" />
+    <Compile Include="Util\Extensions\Vector2Ext.cs" />
+    <Compile Include="Util\NStringBuilder.cs" />
+    <Compile Include="Util\Pooler.cs" />
+    <Compile Include="Util\SpriteAnimationBuilder.cs" />
+    <Compile Include="Util\SpriteBank.cs" />
+    <Compile Include="Util\Time.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\Oracle\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Nocturne\NocturneDefault.spritefont" />
+    <None Include="Content\Nocturne\NocturneDefault.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Debug\DebugDefaults.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Program Files (x86)\MonoGame\v3.0\Assemblies\DesktopGL\x64\SDL2.dll">
+      <Link>x64\SDL2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="C:\Program Files (x86)\MonoGame\v3.0\Assemblies\DesktopGL\x64\soft_oal.dll">
+      <Link>x64\soft_oal.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="C:\Program Files (x86)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libSDL2-2.0.so.0">
+      <Link>x64\libSDL2-2.0.so.0</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="C:\Program Files (x86)\MonoGame\v3.0\Assemblies\DesktopGL\x64\libopenal.so.1">
+      <Link>x64\libopenal.so.1</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libSDL2-2.0.0.dylib">
+      <Link>libSDL2-2.0.0.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\libopenal.1.dylib">
+      <Link>libopenal.1.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll.config">
+      <Link>MonoGame.Framework.dll.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Graphics\SpriteSheet.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
