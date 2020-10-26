@@ -1,6 +1,6 @@
 # Nocturne
 
-Nocturne is a framework to help create 2D games with Monogame.  
+Nocturne is a framework that makes creating 2D games with Monogame easier.  
 This was created because I wanted to cherry pick the parts I liked from prime31's Nez framework (physics), and Maddy Thorson's Monocle engine (entity scene simplicity).
 Some differences between Nocturne and Nez/Monocle
 
